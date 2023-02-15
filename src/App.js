@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './assets/img/logo.svg'
+import Card from './components/Card';
+import Contexts from './contexts/Contexts'
+
+import { useState } from 'react'
 
 function App() {
+
+  const [amount, setAmount] = useState(0);
+  const [people, setpeople] = useState(0);
+  const [tip, setTip] = useState(0);
+  const [bill, setBill] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Contexts.Provider value={{ amount, setAmount, people, setpeople, tip, setTip, bill, setBill }}>
+        <div className=" bg-light-grayish-cyan flex flex-col align-middle justify-center">
+          <div className="flex flex-col h-[80%] w-full align-middle justify-evenly">
+            <div className="flex align-middle justify-center w-full h-[10%]">
+              <img src={logo} alt="logo" />
+            </div>
+            <div className="flex w-full align-middle justify-evenly">
+              <Card />
+            </div>
+          </div>
+        </div>
+      </Contexts.Provider>
+    </>
   );
 }
 
