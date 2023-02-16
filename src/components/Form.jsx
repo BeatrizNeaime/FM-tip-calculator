@@ -1,4 +1,4 @@
-import {useContext } from 'react'
+import { useContext, useEffect } from 'react'
 
 import Contexts from '../contexts/Contexts'
 import dolar from "../assets/img/icon-dollar.svg";
@@ -8,12 +8,32 @@ import TipBtn from './TipBtn';
 
 
 const Form = () => {
-    const {setpeople, setBill, setTip } = useContext(Contexts);
+    const { amount, bill, tip, people, setAmount, setpeople, setBill, setTip, setCalc, settotal } = useContext(Contexts);
 
     const handleBill = (e) => {
         const { value } = e.target
         setBill(value)
     }
+
+    const setValues = (e) => {
+        setpeople(e.target.value)
+    }
+
+    const calculator = () => {
+        if (people <= 0) {
+            setAmount("00.00")
+            settotal("00.00")
+        } else {
+            let gorjeta = ((bill * tip) / 100).toFixed(2)
+            setAmount(parseFloat((gorjeta / people).toFixed(2)))
+            let pessoal = (((bill/people) + gorjeta).toFixed(2))
+            //settotal(pessoal)  
+        }
+    }
+
+    useEffect(() => {
+        calculator()
+    }, [people]);
 
     return (
         <div className='md:w-[50%] mb-[2rem] w-full flex flex-col '>
@@ -34,7 +54,7 @@ const Form = () => {
             <Subtitle text="Number of People" />
             <div className="">
                 <i><img src={person} alt="dolar symbol" className="absolute p-3" /></i>
-                <input type="number" className={`p-3 h-[2.8rem] w-full bg-light-grayish-cyan rounded-md focus:text-dark-cyan text-right text-[24px]`} placeholder="0" onChange={(e) => setpeople(e.target.value)} />
+                <input type="number" className={`p-3 h-[2.8rem] w-full bg-light-grayish-cyan rounded-md focus:text-dark-cyan text-right text-[24px]`} placeholder="0" onChange={setValues} />
             </div>
         </div>
     )

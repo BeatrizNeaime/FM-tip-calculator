@@ -13,7 +13,6 @@ const TipBtn = ({ tipvalue }) => {
         : ('bg-dark-cyan text-center text-white rounded-md h-10 w-28 md:hover:bg-light-grayish-cyan')}
                 onClick={() => {
                     setTip(tipvalue)
-                    console.log(tip, tipvalue);
                 }} >
                 {tipvalue}%
             </button>
