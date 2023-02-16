@@ -26,13 +26,16 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+How the app behaves when open in a smartphone
+![](./src/assets/screenshots/smartphones.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+How the app behaves when open in a tablet
+![](./src/assets/screenshots/tablet.png)
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+
+How the app behaves when open in a desktop
+![](./src/assets/screenshots/desktop.png)
 
 ### Links
 
