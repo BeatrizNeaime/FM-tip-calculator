@@ -26,16 +26,16 @@ Users should be able to:
 
 ### Screenshot
 
-How the app behaves when open in a smartphone
 ![](./src/assets/screenshots/smartphones.png)
+How the app behaves when open in a smartphone
 
 
-How the app behaves when open in a tablet
 ![](./src/assets/screenshots/tablet.png)
+How the app behaves when open in a tablet
 
 
-How the app behaves when open in a desktop
 ![](./src/assets/screenshots/desktop.png)
+How the app behaves when open in a desktop
 
 ### Links
 
