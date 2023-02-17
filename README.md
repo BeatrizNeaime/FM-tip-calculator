@@ -41,7 +41,6 @@ How the app behaves when open in a desktop
 
 - Solution URL: [Github](https://www.linkedin.com/in/beatriz-neaime-1564b51b1/)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
 ## My process
 
 ### Built with
@@ -65,6 +64,7 @@ From now on I know a better way to deal with projects that demands the use of sh
 - Website - [BeatrizNeaime](https://beatrizneaime.vercel.app)
 - Frontend Mentor - [@BeatrizNeaime](https://www.frontendmentor.io/profile/BeatrizNeaime)
 - Linkedin -  [Beatriz Neaime](https://www.linkedin.com/in/beatriz-neaime-1564b51b1/)
+
 ## Acknowledgments
 
 Use global states!!!
