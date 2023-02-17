@@ -8,9 +8,10 @@ import TipBtn from './TipBtn';
 
 
 const Form = () => {
-    const { amount, bill, tip, people, setAmount, setpeople, setBill, setTip, setCalc, settotal } = useContext(Contexts);
+    const { bill, tip, people, setAmount, setpeople, setBill, setTip, settotal } = useContext(Contexts);
 
     const handleBill = (e) => {
+        ''
         const { value } = e.target
         setBill(value)
     }
@@ -26,8 +27,11 @@ const Form = () => {
         } else {
             let gorjeta = ((bill * tip) / 100).toFixed(2)
             setAmount(parseFloat((gorjeta / people).toFixed(2)))
-            let pessoal = (((bill/people) + gorjeta).toFixed(2))
-            //settotal(pessoal)  
+            console.log(gorjeta / people);
+            let pessoal = (parseFloat(
+                (bill / people) + (gorjeta / people)
+            )).toFixed(2)
+            settotal(pessoal)
         }
     }
 

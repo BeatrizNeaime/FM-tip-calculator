@@ -17,12 +17,12 @@ function App() {
     <>
       <Contexts.Provider value={{ amount, setAmount, people, setpeople, tip, setTip, bill, setBill, total, settotal}}>
         <div className=" bg-light-grayish-cyan flex flex-col align-middle justify-center
-          md:h-full 
-        ">
-          <div className="flex flex-col h-[80%] w-full align-middle justify-evenly
           md:h-[100vh]
+        ">
+          <div className="flex flex-col h-[70%] w-full align-middle justify-evenly
+          md:h-full
           ">
-            <div className="flex align-middle justify-center w-full h-[10%] mt-[1.5rem]
+            <div className="flex align-middle justify-center w-full h-[5%] mt-[1.5rem]
             ">
               <img src={logo} alt="logo" />
             </div>
